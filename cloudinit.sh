@@ -1,8 +1,3 @@
-#!/bin/bash
-#SBATCH --job-name=TEST      # Job name 
-#SBATCH --output=TEST.log     # Standard output and error log     
-
-#Install Miniconda
 
 mkdir -p ~/miniconda3
 
@@ -16,7 +11,7 @@ rm -rf ~/miniconda3/miniconda.sh
 
 ~/miniconda3/bin/conda init zsh
 
-exec bash
+
 
 conda install mamba -y -n base -c conda-forge 
  
@@ -31,3 +26,4 @@ mamba create -n mg-assembly -y -c bioconda spades prodigal prokka kofamscan seqk
 mamba create -n mg-binning -y -c bioconda bowtie2 minimap2 maxbin2 metabat2 drep gtdbtk seqkit
 
 mamba create -n mg-checkm -y -c auto checkm
+
