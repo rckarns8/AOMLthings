@@ -18,16 +18,16 @@ rm -rf ~/miniconda3/miniconda.sh
 
 exec bash
 
-conda install mamba -n base -c conda-forge
+conda install mamba -y -n base -c conda-forge 
  
-mamba create -n mg-qc -c bioconda fastqc multiqc fastp seqkit
+mamba create -n mg-qc -y -c bioconda fastqc multiqc fastp seqkit
 
-mamba create -n mg-coverage -c bioconda -c agbiome nonpareil bbtools seqkit
+mamba create -n mg-coverage -y -c bioconda -c agbiome nonpareil bbtools seqkit
 
-mamba create -n mg-diversity -c bioconda -c biobakery sourmash krona humann metaphlan seqkit
+mamba create -n mg-diversity -y -c bioconda -c biobakery sourmash krona humann metaphlan seqkit
 
-mamba create -n mg-assembly -c bioconda spades prodigal prokka kofamscan seqkit
+mamba create -n mg-assembly -y -c bioconda spades prodigal prokka kofamscan seqkit
 
-mamba create -n mg-binning -c bioconda bowtie2 minimap2 maxbin2 metabat2 drep gtdbtk seqkit
+mamba create -n mg-binning -y -c bioconda bowtie2 minimap2 maxbin2 metabat2 drep gtdbtk seqkit
 
-mamba create -n mg-checkm -c auto checkm
+mamba create -n mg-checkm -y -c auto checkm
