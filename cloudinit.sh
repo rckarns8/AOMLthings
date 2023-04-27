@@ -11,6 +11,7 @@ rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
 
+conda activate
   
 conda install mamba -n base -c conda-forge
  
